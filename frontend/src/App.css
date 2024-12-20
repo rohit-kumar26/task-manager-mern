@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styles */
+.light-mode {
+  background-color: #eaf6f6;
+  color: #34495e;
+}
+
+/* Light Mode Container */
+.light-mode .task-manager-container {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #102027;
+  color: #cfd8dc;
+}
+
+/* Dark Mode Container */
+.dark-mode .task-manager-container {
+  background-color: #1c313a;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid #37474f;
+}
+
+/* Task Manager Container */
+.task-manager-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Title */
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #00695c;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields */
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border: 2px solid #b2dfdb;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00796b;
+  box-shadow: 0px 0px 8px rgba(0, 121, 107, 0.5);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #263238;
+  color: #cfd8dc;
+  border: 2px solid #37474f;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+  border-color: #4db6ac;
+  box-shadow: 0px 0px 8px rgba(77, 182, 172, 0.8);
+}
+
+/* Task Items */
+.task-item {
+  background-color: #e0f2f1;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .task-item {
+  background-color: #37474f;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+/* Buttons (Edit/Delete) */
+.task-actions button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.edit-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+button.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Text Content */
+p {
+  margin: 0;
+  color: inherit;
+  font-size: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .task-manager-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .theme-toggle-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+  }
+}

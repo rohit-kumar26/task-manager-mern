@@ -1,0 +1,79 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.task-item {
+  background: #ffffff; /* Light mode background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .task-item {
+  background: #2e2e2e; /* Dark mode background */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6); /* Darker shadow for dark mode */
+}
+
+.task-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333; /* Light mode text */
+  transition: color 0.3s ease;
+}
+
+.dark-mode .task-title {
+  color: #d1d1d1; /* Soft white for dark mode */
+}
+
+.task-desc {
+  color: #666666; /* Light mode text */
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .task-desc {
+  color: #a9a9a9; /* Light gray for dark mode */
+}
+
+.task-actions button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.task-edit {
+  background-color: #4caf50; /* Green button */
+}
+
+.task-delete {
+  background-color: #f44336; /* Red button */
+}
+
+.task-actions button:hover {
+  transform: scale(1.05);
+}
+
+.dark-mode .task-edit {
+  background-color: #388e3c; /* Darker green for dark mode */
+}
+
+.dark-mode .task-delete {
+  background-color: #d32f2f; /* Darker red for dark mode */
+}

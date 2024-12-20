@@ -1,0 +1,89 @@
+.task-form {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Light mode gradient */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .task-form {
+  background: linear-gradient(135deg, #444444, #555555); /* Dark mode gradient */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
+}
+
+.form-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333; /* Light mode text color */
+  transition: color 0.3s ease;
+}
+
+.dark-mode .form-title {
+  color: #ffffff; /* Soft white for dark mode */
+}
+
+.task-input,
+.task-textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Light mode input background */
+  color: #333; /* Light mode input text */
+  transition: all 0.3s ease;
+}
+
+.dark-mode .task-input,
+.dark-mode .task-textarea {
+  background-color: #2e2e2e; /* Dark mode input background */
+  color: #ffffff; /* Soft white for text in dark mode */
+  border: 1px solid #444; /* Slightly darker border for dark mode */
+}
+
+.task-input:focus,
+.task-textarea:focus {
+  border-color: #ff6f61;
+  box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.6);
+  outline: none;
+}
+
+.dark-mode .task-input:focus,
+.dark-mode .task-textarea:focus {
+  border-color: #ff6f61; /* Same highlight color in dark mode */
+  box-shadow: 0px 0px 8px rgba(255, 111, 97, 0.8); /* Slightly stronger glow */
+}
+
+.task-button {
+  background-color: #ff6f61; /* Light mode button */
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(255, 111, 97, 0.4);
+  transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s ease;
+}
+
+.dark-mode .task-button {
+  background-color: #ff6f61; /* Retain the same button color in dark mode */
+  box-shadow: 0px 5px 10px rgba(255, 111, 97, 0.6); /* Slightly more pronounced shadow */
+}
+
+.task-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(255, 111, 97, 0.6);
+}
+
+.dark-mode .task-button:hover {
+  box-shadow: 0px 8px 15px rgba(255, 111, 97, 0.8); /* Stronger shadow for hover in dark mode */
+}
